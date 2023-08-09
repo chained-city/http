@@ -2,9 +2,9 @@ import requestHeadersMiddleware from '../middlewares/request/headers';
 import requestParametersMiddleware from '../middlewares/request/parameters';
 import requestParamsMiddleware from '../middlewares/request/params';
 import { IRequestContext, IResponseContext } from '../typings';
-import { Chained } from '@lyrical/js';
 import { HTTPPlugin } from './plugin';
 import { CancelPlugin } from '../plugins/cancel';
+import { Chained } from '@logically/coding-model';
 
 /***
  * 创建 HTTP 链

@@ -35,5 +35,8 @@
     "*.{css,less,scss,styl}": [
       "stylelint --config .stylelintrc.js *.{css,less,scss,styl}"
     ]
+  },
+  "dependencies": {
+    "@logically/coding-model": "^0.1.0"
   }
 }
