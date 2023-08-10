@@ -1,3 +1,4 @@
+import { FuncMapOrMap } from '@logically/types';
 import {
   REQUEST_TYPE,
   REQUEST_OPTIONAL_CACHE,
@@ -7,7 +8,6 @@ import {
   REQUEST_OPTIONAL_REFERRER_POLICY
 } from '../constants/request';
 import { RESPONSE_BODY_TYPE } from '../constants/response';
-import { FuncMapOrMap } from '@lyrical/types';
 
 type UseMap<TM, M, U> = U extends true ? FuncMapOrMap<TM, M> : M;
 

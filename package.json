@@ -25,7 +25,7 @@
     "@lough/tsconfig": "^0.0.5",
     "husky": "^7.0.2",
     "lint-staged": "^11.1.2",
-    "prettier": "^3.0.1",
+    "prettier": "^2.8.4",
     "typescript": "^5.1.6"
   },
   "lint-staged": {
@@ -37,6 +37,7 @@
     ]
   },
   "dependencies": {
-    "@logically/coding-model": "^0.1.0"
+    "@logically/coding-model": "^0.1.0",
+    "@logically/types": "^0.1.0"
   }
 }

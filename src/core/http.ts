@@ -39,7 +39,7 @@ const transformRequest = (request: IRequest<RESPONSE_BODY_TYPE | undefined, true
   return context;
 };
 
-abstract class HTTP<R = any, Body extends object | void = void, BodyDataKey extends string = ''> {
+export abstract class HTTP<R = any, Body extends object | void = void, BodyDataKey extends string = ''> {
   private originChained =
     createChained<
       Body extends void
