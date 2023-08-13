@@ -1,6 +1,5 @@
+import { HTTP } from '../core/http';
 import { HTTPConfig } from '../typings';
-import { Fetch } from './fetch';
-import HTTP from '../core/http';
 
 /**
  * RESTful API
@@ -14,10 +13,9 @@ export class RESTful<Interface, Body extends object | void = void, BodyDataKey e
   constructor(prefix: string, http?: HTTP<any, Body, BodyDataKey> | HTTPConfig) {
     this.prefix = prefix;
 
-    this.http =
-      http instanceof HTTP
-        ? http
-        : (RESTful.http as HTTP<any, Body, BodyDataKey>) || new Fetch<Body, BodyDataKey>(http);
+    this.http = http instanceof HTTP ? http : (RESTful.http as HTTP<any, Body, BodyDataKey>);
+
+    if (!this.http) throw new Error('No http request tool found!');
   }
 
   /**

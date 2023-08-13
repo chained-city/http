@@ -280,5 +280,3 @@ export abstract class HTTP<R = any, Body extends object | void = void, BodyDataK
     return this.request<B>({ ...options, url, method: REQUEST_TYPE.DELETE });
   }
 }
-
-export default HTTP;
