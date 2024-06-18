@@ -1,6 +1,6 @@
 {
   "name": "@chained/http",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Http Chained.",
   "keywords": [
     "typescript",
@@ -16,14 +16,15 @@
   "types": "es/index.d.ts",
   "unpkg": "dist/index.min.js",
   "scripts": {
-    "prepare": "husky install",
+    "prepare": "npx husky install",
     "lint:es": "eslint -c .eslintrc.js --ext .ts,.tsx ./",
     "lint:es-fix": "eslint --fix -c .eslintrc.js --ext .ts,.tsx ./",
+    "prepublishOnly": "npm run build",
     "build": "lough-build",
     "dev": "lough-build dev"
   },
   "dependencies": {
-    "@logically/coding-model": "^0.1.0",
+    "@logically/coding-model": "^0.1.6",
     "@logically/types": "^0.1.0"
   },
   "devDependencies": {
