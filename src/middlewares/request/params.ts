@@ -8,7 +8,7 @@ const requestParamsMiddleware = (ctx: IRequestContext) => {
 
   if (options.params)
     Object.keys(options.params).forEach(key => {
-      options.url = options.url.replace(':key', options.params[key]);
+      options.url = options.url.replace(`:${key}`, options.params[key]);
     });
 
   if (options.query) options.url = `${options.url}?${new URLSearchParams(options.query).toString()}`;
